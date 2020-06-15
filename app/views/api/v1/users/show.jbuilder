@@ -1,9 +1,9 @@
 json.data do
   json.id @user.id
-  json.name @user.username
+  json.username @user.username
   json.email @user.email
   json.createdate @user.created_at
-end
-json.branchOffice @user.branch_office_id do |b|
-  json.name b.name
+  json.branchOffice @branch do |bran|
+    json.name bran.name
+  end
 end

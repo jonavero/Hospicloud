@@ -11,7 +11,11 @@ class Api::V1::UsersController < ApplicationController
   # GET /users/1
   def show
     #render json: @user
-    render :show
+    @user =User.find(params[:id])
+    @branch=User.select(Arel.star).where(User.arel_table[:id].eq(@user.id)).joins(
+        User.arel_table.join(BranchOffice.arel_table).on(
+            BranchOffice.arel_table[:id].eq(User.arel_table[:branch_office_id])
+        ).join_sources)
   end
 
   # POST /users
