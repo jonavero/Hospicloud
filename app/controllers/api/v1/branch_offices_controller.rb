@@ -5,7 +5,7 @@ class Api::V1::BranchOfficesController < ApplicationController
   def index
     @branch_offices = BranchOffice.all
 
-    render json: @branch_offices
+    render  :index
   end
 
   # GET /branch_offices/1
