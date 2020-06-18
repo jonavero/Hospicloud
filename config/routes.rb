@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users
       resources :branch_offices
       resources :ars
+      resources :doctors
 
     end
   end
