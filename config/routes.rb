@@ -7,8 +7,11 @@ Rails.application.routes.draw do
       resources :ars
       resources :doctors
       resources :medicines
+      get '/medicine/search/description' => 'medicines#search',  as: :SearchMedicine
       resources :rooms
       resources :beds
+      resources :patients
+      get '/patient/:identityCard' => 'patients#patientcard',param: :identityCard, as: :IdentityCardSearch
 
 
 

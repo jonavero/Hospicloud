@@ -4,4 +4,6 @@ class User < ApplicationRecord
   has_many :ars
   has_many :medicines
   has_many :rooms
+  has_many :beds
+  has_many :patients
 end

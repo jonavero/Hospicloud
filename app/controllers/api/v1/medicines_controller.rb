@@ -15,6 +15,11 @@ class Api::V1::MedicinesController < ApplicationController
         User.arel_table.join(Medicine.arel_table).on(Medicine.arel_table[:user_id].eq(User.arel_table[:id])).join_sources)
   end
 
+  def search
+    @medicineSearch = Medicine.ransack(description: params[:q]).result(distinct: true ).limit (5)
+      #Medicine.select(Arel.star).where(:description)
+  end
+
   # POST /medicines
   # POST /medicines.json
   def create
