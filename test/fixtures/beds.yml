@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idRoom: 1
+  namer: MyString
+  status: MyString
+  userId: 1
+
+two:
+  idRoom: 1
+  namer: MyString
+  status: MyString
+  userId: 1

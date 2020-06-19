@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :doctors
       resources :medicines
       resources :rooms
+      resources :beds
 
 
 
