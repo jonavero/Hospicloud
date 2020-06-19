@@ -6,6 +6,10 @@ Rails.application.routes.draw do
       resources :branch_offices
       resources :ars
       resources :doctors
+      resources :medicines
+      resources :rooms
+
+
 
     end
   end
