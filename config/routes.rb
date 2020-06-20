@@ -13,7 +13,10 @@ Rails.application.routes.draw do
       resources :patients
       get '/patient/:identityCard' => 'patients#patientcard',param: :identityCard, as: :IdentityCardSearch
       resources :entries
-
+      resources :entry_medicines
+      get '/entry/medicine' => 'entry_medicines#index', as: :entry_medicinesAll
+      post '/entry/medicine' => 'entry_medicines#create', as: :entry_medicinesCreate
+      get '/entry/medicine/:id' => 'entry_medicines#show', as: :entry_medicinesShow
 
 
     end
