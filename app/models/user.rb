@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :rooms
   has_many :beds
   has_many :patients
+  has_many :entries
 end

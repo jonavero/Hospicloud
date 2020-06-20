@@ -16,7 +16,7 @@ class Api::V1::MedicinesController < ApplicationController
   end
 
   def search
-    @medicineSearch =Medicine.select(Arel.star).where("description like ?","%#{params[:q]}%")
+    @medicineSearch =Medicine.select(Arel.star).where("description like ?","#{params[:q]}%")
       #Medicine.ransack(description: params[:q]).result(distinct: true).limit(5)
       #Medicine.select(Arel.star).where(:description)
   end

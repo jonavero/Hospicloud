@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idPatient: 1
+  idRoom: 1
+  idDoctor: 1
+  diagnosis: MyString
+  referral: MyString
+  tutorname: MyString
+  lastname: MyString
+  brithday: MyString
+  gender: MyString
+  identityCard: MyString
+  address: MyString
+  civilState: MyString
+  thumbnail: MyString
+  phone: MyString
+  telephone: MyString
+  idARS: 1
+  numARS: MyString
+  status: MyString
+  userId: 1
+
+two:
+  idPatient: 1
+  idRoom: 1
+  idDoctor: 1
+  diagnosis: MyString
+  referral: MyString
+  tutorname: MyString
+  lastname: MyString
+  brithday: MyString
+  gender: MyString
+  identityCard: MyString
+  address: MyString
+  civilState: MyString
+  thumbnail: MyString
+  phone: MyString
+  telephone: MyString
+  idARS: 1
+  numARS: MyString
+  status: MyString
+  userId: 1

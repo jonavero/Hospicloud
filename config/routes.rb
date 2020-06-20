@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :beds
       resources :patients
       get '/patient/:identityCard' => 'patients#patientcard',param: :identityCard, as: :IdentityCardSearch
+      resources :entries
 
 
 

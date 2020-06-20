@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_19_032812) do
+ActiveRecord::Schema.define(version: 2020_06_19_225759) do
 
   create_table "ars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -42,6 +42,21 @@ ActiveRecord::Schema.define(version: 2020_06_19_032812) do
     t.string "lastname"
     t.string "identityCard"
     t.string "exequatur"
+    t.string "status", default: "A"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "entries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "idPatient"
+    t.integer "idRoom"
+    t.integer "idDoctor"
+    t.string "diagnosis"
+    t.string "referral"
+    t.string "tutorName"
+    t.string "telephone"
+    t.string "relationship"
     t.string "status", default: "A"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
