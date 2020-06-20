@@ -13,5 +13,4 @@ json.Patients @patients do|p|
   json.idARS p.idARS
   json.numARS p.numARS
   json.status p.status
-
 end
