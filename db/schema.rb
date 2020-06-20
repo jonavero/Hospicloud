@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_20_024111) do
+ActiveRecord::Schema.define(version: 2020_06_20_025603) do
 
   create_table "ars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(version: 2020_06_20_024111) do
     t.bigint "branch_office_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password"
+    t.string "password_digest"
     t.index ["branch_office_id"], name: "index_users_on_branch_office_id"
   end
 

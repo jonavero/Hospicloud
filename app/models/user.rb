@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_secure_password
   belongs_to :BranchOffice, optional: true
   has_many :doctors
   has_many :ars
