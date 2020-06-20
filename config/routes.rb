@@ -17,7 +17,10 @@ Rails.application.routes.draw do
       get '/entry/medicine' => 'entry_medicines#index', as: :entry_medicinesAll
       post '/entry/medicine' => 'entry_medicines#create', as: :entry_medicinesCreate
       get '/entry/medicine/:id' => 'entry_medicines#show', as: :entry_medicinesShow
-
+      resources :procedures
+      get '/entry/process' => 'procedures#index', as: :proceduresAll
+      post '/entry/process' => 'procedures#create', as: :proceduresCreate
+      get '/entry/process/:id' => 'procedures#show', as: :proceduresShow
 
     end
   end
